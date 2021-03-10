@@ -38,9 +38,11 @@
                     @Html.DisplayFor(modelIem => usuario.Telefone)
                 </td>
                 <td>
-                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Usuario",new { id = usuario.Id},Context.Request.Scheme);','Edição do Usuário')" class="btn btn-info text-white">Editar</a> |
-                  
-                    <a asp-action="Delete" asp-route-id="@usuario.Id">Excluir</a>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Usuario", new { id = usuario.Id }, Context.Request.Scheme)','Edição do Usuário')" class="btn btn-info text-white">Editar</a> 
+                    <form asp-action="Delete" asp-route-id="@usuario.Id" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    </form>
+                    
                 </td>
             </tr>
         }

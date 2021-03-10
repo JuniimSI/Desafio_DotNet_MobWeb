@@ -1,4 +1,4 @@
-﻿@model  Desafio_dotNet_Mobweb.Models.Usuario
+﻿@model Desafio_dotNet_Mobweb.Models.Usuario
 
 @{
     ViewData["Title"] = "Usuarios";
@@ -9,7 +9,7 @@
     <div class="col-md-12">
         <form asp-action="AddOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this);" autocomplete="off">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Id" value="@Model.Id" />
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
                 <input asp-for="Nome" class="form-control" />
@@ -40,7 +40,7 @@
                 <span asp-validation-for="Telefone" class="text-danger"></span>
             </div>
 
-            <div class="form-group">                
+            <div class="form-group">
                 <input type="submit" value="Submit" class="btn btn-primary block" />
             </div>
         </form>
@@ -48,3 +48,6 @@
 </div>
 
 
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XzCrgdh5TXK1PvmC+VQ5OA2X11/MKZN6XR/tQSbKY4w3W46CM+4wvhWZWEynqHfXOHXxxARPh9DSeJA8g4sxCg==",
+  "dgSpecHash": "PykcPUsPhzbmd4Lfp21wAq/MF9qR3X5x6zTGZmjH07rZJzSJ5A6dlYlpsJbTzH/AQ0hWTqXpqRawAPTjOeYSSQ==",
   "success": true,
-  "projectFilePath": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_DotNet_MobWeb\\Desafio_dotNet_Mobweb.csproj",
+  "projectFilePath": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_dotNet_Mobweb\\Desafio_dotNet_Mobweb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JuniorF\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\JuniorF\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
