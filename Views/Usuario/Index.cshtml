@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Desafio_dotNet_Mobweb.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+
+}
+
+<div class="text-center">
+    Hello Usuarios
+</div>
+
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAll", Model)
+</div>

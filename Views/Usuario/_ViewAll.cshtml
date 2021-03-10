@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Desafio_dotNet_Mobweb.Models.Usuario>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apelido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                <a onclick="showInPopup('@Url.Action("AddOrEdit","Usuario",null,Context.Request.Scheme)','Novo Usuário')" class="btn btn-success text-white">Criar novo</a>
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelIem => usuario.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelIem => usuario.Apelido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelIem => usuario.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelIem => usuario.Telefone)
+                </td>
+                <td>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Usuario",new { id = usuario.Id},Context.Request.Scheme);','Edição do Usuário')" class="btn btn-info text-white">Editar</a> |
+                  
+                    <a asp-action="Delete" asp-route-id="@usuario.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
