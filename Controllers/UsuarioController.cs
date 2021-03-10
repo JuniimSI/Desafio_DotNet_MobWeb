@@ -27,7 +27,7 @@ namespace Desafio_dotNet_Mobweb.Controllers
             return View();
         }
 
-        public async Task<IActionResult> AddOrEditAsync(int id = 0)
+        public async Task<IActionResult> AddOrEdit(int id = 0)
         {
             if (id == 0)
             {
@@ -61,6 +61,7 @@ namespace Desafio_dotNet_Mobweb.Controllers
                     try
                     {
                         _context.Update(usuario);
+                        Console.WriteLine(usuario);
                         await _context.SaveChangesAsync();
                     }
                     catch (DbUpdateConcurrencyException)
@@ -83,6 +84,22 @@ namespace Desafio_dotNet_Mobweb.Controllers
                 html = Helper.RenderRazorViewToString(this, "AddOrEdit", usuario) });
             
         }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var usuario = await _context.Usuarios.FindAsync(id);
+            _context.Usuarios.Remove(usuario);
+            await _context.SaveChangesAsync();
+            return Json(new
+            {
+               
+                html = Helper.RenderRazorViewToString(this, "_ViewAll", _context.Usuarios.ToList())
+            });
+        }
+
+
 
         private bool UsuarioExists(int id)
         {

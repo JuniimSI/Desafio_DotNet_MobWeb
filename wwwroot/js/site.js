@@ -9,7 +9,8 @@ showInPopup = (url, title) => {
         type: "GET",
         url: url,
         success: function (res) {
-            console.log("sucess"+res);
+            console.log("sucess" + res);
+
             $("#form-modal .modal-body").html(res);
             $("#form-modal .modal-title").html(title);
             $("#form-modal").modal('show');
@@ -44,6 +45,31 @@ jQueryAjaxPost = form => {
         })
     } catch (e) {
         console.log(e)
+    }
+
+    //to prevent default form submit event
+    return false;
+}
+
+jQueryAjaxDelete = form => {
+    if (confirm('Você tem certeza que quer apagar esse usuário?')) {
+        try {
+            $.ajax({
+                type: "POST",
+                url: form.action,
+                data: new FormData(form),
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    $("#view-all").html(res.html);
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     //to prevent default form submit event

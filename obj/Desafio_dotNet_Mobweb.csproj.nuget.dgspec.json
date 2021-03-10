@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_DotNet_MobWeb\\Desafio_dotNet_Mobweb.csproj": {}
+    "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_dotNet_Mobweb\\Desafio_dotNet_Mobweb.csproj": {}
   },
   "projects": {
-    "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_DotNet_MobWeb\\Desafio_dotNet_Mobweb.csproj": {
+    "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_dotNet_Mobweb\\Desafio_dotNet_Mobweb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_DotNet_MobWeb\\Desafio_dotNet_Mobweb.csproj",
+        "projectUniqueName": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_dotNet_Mobweb\\Desafio_dotNet_Mobweb.csproj",
         "projectName": "Desafio_dotNet_Mobweb",
-        "projectPath": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_DotNet_MobWeb\\Desafio_dotNet_Mobweb.csproj",
+        "projectPath": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_dotNet_Mobweb\\Desafio_dotNet_Mobweb.csproj",
         "packagesPath": "C:\\Users\\JuniorF\\.nuget\\packages\\",
-        "outputPath": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_DotNet_MobWeb\\obj\\",
+        "outputPath": "G:\\Workspace STS\\dotnet\\Desafio_dotNet\\Desafio_dotNet_Mobweb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JuniorF\\AppData\\Roaming\\NuGet\\NuGet.Config",
